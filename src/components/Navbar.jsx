@@ -1,23 +1,19 @@
-import { useState, useEffect } from 'react';
 import './Navbar.css';
+import { useState } from 'react';
 
-const links = ['About', 'Projects', 'CV', 'Consuming'];
+const links = [
+  { label: 'About', href: '#about' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'CV', href: '#cv' },
+  { label: 'Consuming', href: '#consuming' },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
   return (
-    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
-      <a href="#hero" className="navbar__logo">
-        maya<span>.</span>
-      </a>
+    <nav className="navbar">
+      <div className="navbar__left">Portfolio 2026</div>
 
       <button
         className="navbar__toggle"
@@ -29,17 +25,18 @@ export default function Navbar() {
 
       <ul className={`navbar__links ${open ? 'navbar__links--open' : ''}`}>
         {links.map((l) => (
-          <li key={l}>
-            <a
-              className="navbar__link"
-              href={`#${l.toLowerCase()}`}
-              onClick={() => setOpen(false)}
-            >
-              {l}
+          <li key={l.label}>
+            <a className="navbar__link" href={l.href} onClick={() => setOpen(false)}>
+              {l.label}
             </a>
           </li>
         ))}
       </ul>
+
+      <div className="navbar__socials">
+        <a href="https://linkedin.com/in/maya-glenn-mgg1968" target="_blank" rel="noopener noreferrer">LI</a>
+        <a href="mailto:mayaglenn@utexas.edu">EM</a>
+      </div>
     </nav>
   );
 }

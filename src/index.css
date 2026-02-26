@@ -43,6 +43,19 @@ a:hover {
   opacity: 0.5;
 }
 
+/* ── Top Fade Mask ── */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 18vh;
+  background: linear-gradient(to bottom, var(--bg-color) 50%, transparent 100%);
+  z-index: 99;
+  pointer-events: none;
+}
+
 /* ── Frame Anchors (corner nav) ── */
 .frame-anchor {
   position: fixed;

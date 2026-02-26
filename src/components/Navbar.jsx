@@ -1,11 +1,11 @@
-import './Navbar.css';
 import { useState } from 'react';
+import './Navbar.css';
 
 const links = [
   { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
+  { label: 'Work', href: '#projects' },
   { label: 'CV', href: '#cv' },
-  { label: 'Consuming', href: '#consuming' },
+  { label: 'Now', href: '#consuming' },
 ];
 
 export default function Navbar() {
@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <div className="navbar__left">Portfolio 2026</div>
+      <div className="navbar__logo">Maya Glenn</div>
 
       <button
         className="navbar__toggle"
@@ -33,9 +33,9 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <div className="navbar__socials">
-        <a href="https://linkedin.com/in/maya-glenn-mgg1968" target="_blank" rel="noopener noreferrer">LI</a>
-        <a href="mailto:mayaglenn@utexas.edu">EM</a>
+      <div className="navbar__right">
+        <a href="https://linkedin.com/in/maya-glenn-mgg1968" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:mayaglenn@utexas.edu">Email</a>
       </div>
     </nav>
   );

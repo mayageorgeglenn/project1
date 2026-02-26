@@ -26,7 +26,7 @@ const experience = [
         desc: 'Critical technologies VC firm. Authored battery market landscape memo with competitor analysis, and led sourcing for early-stage non-Li-Ion battery investments.',
     },
     {
-        role: 'Founder\'s Associate',
+        role: "Founder's Associate",
         org: 'Throne',
         date: 'March 2024 — May 2024',
         desc: 'Marketing analytics for a bootstrapped e-commerce marketplace. Led creator partnerships achieving 60%+ onboarding rate, and performed product analytics to inform advertising strategies.',
@@ -38,13 +38,13 @@ const education = [
         role: 'B.S. Statistics & Data Science',
         org: 'The University of Texas at Austin',
         date: '2022 — 2026',
-        desc: 'Minor in Computer Science. Polymathic Scholars Honors Program. GPA: 3.95/4.0. College of Natural Sciences Scholarship.',
+        desc: 'Minor in Computer Science. Polymathic Scholars Honors Program. GPA: 3.95/4.0.',
     },
 ];
 
 const skills = {
     'Languages & Tools': ['Python', 'SQL', 'R', 'Tableau', 'Excel', 'Power BI'],
-    'Python Libraries': ['Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn'],
+    'Libraries': ['Pandas', 'NumPy', 'Matplotlib', 'Scikit-learn'],
     'Domains': ['Financial Modeling', 'Valuation', 'M&A', 'Data Visualization'],
     'ML & AI': ['XGBoost', 'Random Forest', 'SVM', 'Linear Regression'],
 };
@@ -53,12 +53,12 @@ export default function CV() {
     return (
         <section className="cv" id="cv">
             <div className="section-wrap">
-                <div className="section-label">Experience</div>
-                <h2 className="section-title">My journey so far</h2>
+                <div className="section-label">Curriculum Vitae</div>
+                <h2 className="section-title">The Record</h2>
 
                 <div className="cv__columns">
                     <div>
-                        <div className="cv__col-title">Work</div>
+                        <div className="cv__col-title">Experience</div>
                         {experience.map((e) => (
                             <div className="cv__item" key={e.role}>
                                 <div className="cv__item-role">{e.role}</div>
@@ -68,7 +68,7 @@ export default function CV() {
                             </div>
                         ))}
 
-                        <div className="cv__col-title" style={{ marginTop: 'var(--space-m)' }}>Education</div>
+                        <div className="cv__col-title">Education</div>
                         {education.map((e) => (
                             <div className="cv__item" key={e.role}>
                                 <div className="cv__item-role">{e.role}</div>
@@ -77,6 +77,16 @@ export default function CV() {
                                 <div className="cv__item-desc">{e.desc}</div>
                             </div>
                         ))}
+
+                        <div className="cv__col-title">Leadership</div>
+                        <div className="cv__item">
+                            <div className="cv__item-role">Director of External Relations</div>
+                            <div className="cv__item-org">Texas Venture Group</div>
+                            <div className="cv__item-date">January 2024 — Present</div>
+                            <div className="cv__item-desc">
+                                {"UT's premier VC organization. Build relationships with 20+ venture firms and startups, and oversee consulting projects from software engineering to market landscaping."}
+                            </div>
+                        </div>
                     </div>
 
                     <div>
@@ -91,17 +101,6 @@ export default function CV() {
                                 </div>
                             </div>
                         ))}
-
-                        <div className="cv__col-title" style={{ marginTop: 'var(--space-m)' }}>Leadership</div>
-                        <div className="cv__item">
-                            <div className="cv__item-role">Director of External Relations</div>
-                            <div className="cv__item-org">Texas Venture Group</div>
-                            <div className="cv__item-date">January 2024 — Present</div>
-                            <div className="cv__item-desc">
-                                UT's premier VC organization. Build relationships with 20+ venture firms and startups,
-                                and oversee consulting projects from software engineering to market landscaping.
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

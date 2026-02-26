@@ -1,0 +1,39 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 20vh;
+}
+
+.contact-link {
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    position: relative;
+    width: fit-content;
+}
+
+.contact-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: black;
+    transition: width 0.5s ease;
+}
+
+.contact-link:hover::after {
+    width: 100%;
+}
+
+.contact-link:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .contact-link {
+        font-size: 2rem;
+    }
+}

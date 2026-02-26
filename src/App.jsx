@@ -1,35 +1,33 @@
 import './index.css';
-import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
-import CV from './components/CV';
+import Experience from './components/Experience';
 import Consuming from './components/Consuming';
-import Footer from './components/Footer';
-import Stars from './components/Stars';
+import Contact from './components/Contact';
 
 export default function App() {
   return (
     <>
-      {/* Grid overlay */}
-      <div className="bg-grid" />
+      {/* Top Left Navigation Header */}
+      <nav className="frame-anchor nav-tl" style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#experience">CV</a>
+        <a href="#consuming">Consuming</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      {/* Floating pixel stars */}
-      <Stars />
+      <Hero />
 
-      <Navbar />
-      <main>
-        <Hero />
-        <div className="separator" />
-        <About />
-        <div className="separator" />
+      <main className="content-wrap">
+        <div id="about"><About /></div>
         <Projects />
-        <div className="separator" />
-        <CV />
-        <div className="separator" />
+        <Experience />
         <Consuming />
+        <Contact />
       </main>
-      <Footer />
     </>
   );
 }

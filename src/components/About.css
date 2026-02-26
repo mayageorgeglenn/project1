@@ -1,53 +1,21 @@
-.about {
-    position: relative;
-    z-index: 10;
-    background: var(--bg-green-dark);
-}
-
-.about__grid {
+.about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-l);
-    align-items: start;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-bottom: 20vh;
 }
 
-.about__bio p {
-    font-size: 0.875rem;
-    color: var(--text-muted);
-    line-height: 1.75;
-    margin-bottom: var(--space-s);
-}
-
-.about__highlights {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-s);
-    margin-top: var(--space-m);
-}
-
-.about__stat {
-    border-top: 1px solid var(--border-subtle);
-    padding-top: var(--space-s);
-}
-
-.about__stat-value {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 2.5rem;
-    color: var(--accent-light-green);
-}
-
-.about__stat-label {
-    font-size: 0.65rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--text-dim);
-    margin-top: 4px;
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    font-weight: 300;
+    letter-spacing: -0.02em;
 }
 
 @media (max-width: 768px) {
-    .about__grid {
+    .about-grid {
         grid-template-columns: 1fr;
     }
 }

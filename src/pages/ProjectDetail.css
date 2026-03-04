@@ -99,6 +99,19 @@
     display: block;
 }
 
+/* Stacked layout (carousel projects) */
+.detail-stacked {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 72ch;
+}
+
 .detail-not-found {
     font-family: monospace;
     font-size: 13px;

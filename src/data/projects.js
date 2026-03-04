@@ -19,6 +19,21 @@ export const projects = [
         aspect: 'ar-landscape',
     },
     {
+        id: 'metrobike-analysis',
+        name: 'METROBIKE MICRO-MOBILITY ANALYSIS',
+        desc: 'Analyzed 2.2 million MetroBike ride records to predict trip duration using XGBoost.',
+        detail: 'Analyzed 2.2 million MetroBike ride records to predict trip duration using XGBoost. Built and tuned a model across membership type, bike type, checkout location, time, and precipitation data, achieving 93% R-squared on 2023 test data. Key finding: precipitation nearly halves average trip duration and significantly reduces overall ridership.',
+        tags: ['machine learning', 'python', 'xgboost', 'pandas', 'scikit-learn', 'core graphics'],
+        img: '/ml_bike_image.png',
+        aspect: 'ar-landscape',
+        carousel: [
+            { src: '/ml_project_1.png', caption: 'Model accuracy within a 1-minute margin: 86.8%. Within 3 minutes: 99%.' },
+            { src: '/ml_project_2.png', caption: "Partial dependence plot showing precipitation's effect on predicted trip duration." },
+            { src: '/ml_project_3.png', caption: 'Average trip duration nearly halves during rainy conditions.' },
+            { src: '/ml_project_4.png', caption: 'Overall trip count drops sharply when precipitation is present.' },
+        ],
+    },
+    {
         id: 'metrobike-ml',
         name: 'METROBIKE ML MODELING',
         desc: 'Built an end-to-end machine learning pipeline to forecast MetroBike station demand and optimize rebalancing logistics.',

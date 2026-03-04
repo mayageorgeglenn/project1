@@ -1,6 +1,7 @@
 import { useLayoutEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { projects } from '../data/projects';
+import Carousel from '../components/Carousel';
 import './ProjectDetail.css';
 
 export default function ProjectDetail() {
@@ -25,39 +26,56 @@ export default function ProjectDetail() {
         <div className="detail-wrap">
             <Link to="/#work" className="back-link">← back to all projects</Link>
 
-            {/* 3-col grid: text left | video center | empty right (balances center) */}
-            <div className="detail-content">
-                <div className="detail-left">
-                    <h1 className="detail-title">{project.name}</h1>
-                    <p className="detail-subtitle">{project.desc}</p>
-                    <div className="project-tags">
-                        {project.tags.map((tag) => (
-                            <span key={tag} className="tag-pill">{tag}</span>
-                        ))}
+            {project.carousel ? (
+                // Stacked layout for projects with a carousel
+                <div className="detail-stacked">
+                    <div className="detail-text-block">
+                        <h1 className="detail-title">{project.name}</h1>
+                        <p className="detail-subtitle">{project.desc}</p>
+                        <div className="project-tags">
+                            {project.tags.map((tag) => (
+                                <span key={tag} className="tag-pill">{tag}</span>
+                            ))}
+                        </div>
+                        <p className="detail-text">{project.detail}</p>
                     </div>
-                    <p className="detail-text">{project.detail}</p>
+                    <Carousel items={project.carousel} />
                 </div>
+            ) : (
+                // Grid layout for projects with video or single image
+                <div className="detail-content">
+                    <div className="detail-left">
+                        <h1 className="detail-title">{project.name}</h1>
+                        <p className="detail-subtitle">{project.desc}</p>
+                        <div className="project-tags">
+                            {project.tags.map((tag) => (
+                                <span key={tag} className="tag-pill">{tag}</span>
+                            ))}
+                        </div>
+                        <p className="detail-text">{project.detail}</p>
+                    </div>
 
-                <div className="detail-body">
-                    {project.video ? (
-                        <div className="detail-video-wrapper">
-                            <video
-                                className="detail-video"
-                                src={project.video}
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                controls
-                            />
-                        </div>
-                    ) : (
-                        <div className={`detail-img-container ${project.aspect}`}>
-                            <img src={project.img} alt={project.name} className="detail-img" />
-                        </div>
-                    )}
+                    <div className="detail-body">
+                        {project.video ? (
+                            <div className="detail-video-wrapper">
+                                <video
+                                    className="detail-video"
+                                    src={project.video}
+                                    autoPlay
+                                    muted
+                                    loop
+                                    playsInline
+                                    controls
+                                />
+                            </div>
+                        ) : (
+                            <div className={`detail-img-container ${project.aspect}`}>
+                                <img src={project.img} alt={project.name} className="detail-img" />
+                            </div>
+                        )}
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 }

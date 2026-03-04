@@ -5,7 +5,7 @@
 
 .back-link {
     display: block;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
     font-size: 11px;
     text-transform: lowercase;
     letter-spacing: 0.05em;
@@ -39,33 +39,33 @@
 }
 
 .detail-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+    font-family: var(--font-display);
     font-weight: 400;
-    font-size: clamp(2.8rem, 5.5vw, 6.5rem);
+    font-size: clamp(2.5rem, 5vw, 5rem);
     line-height: 1;
-    text-transform: lowercase;
-    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
 }
 
 .detail-subtitle {
-    font-family: monospace;
+    font-family: var(--font-sans);
     font-size: 12px;
-    color: #666;
+    font-weight: 300;
+    color: var(--gray-600);
     line-height: 1.5;
 }
 
 .detail-text {
-    font-family: monospace;
+    font-family: var(--font-sans);
     font-size: 13px;
+    font-weight: 300;
     line-height: 1.8;
-    color: #333;
+    color: var(--gray-600);
 }
 
 .detail-img-container {
     width: 100%;
     overflow: hidden;
-    border-radius: 12px;
 }
 
 .ar-landscape {
@@ -89,7 +89,6 @@
     max-height: 80vh;
     aspect-ratio: 9 / 19.5;
     overflow: hidden;
-    border-radius: 16px;
 }
 
 .detail-video {
@@ -113,7 +112,8 @@
 }
 
 .detail-not-found {
-    font-family: monospace;
+    font-family: var(--font-sans);
     font-size: 13px;
+    font-weight: 300;
     margin-bottom: 2rem;
 }

@@ -28,7 +28,6 @@
     overflow: hidden;
     background: #f0f0f0;
     position: relative;
-    border-radius: 12px;
     aspect-ratio: 1 / 1;
 }
 
@@ -55,12 +54,11 @@
 
 .tag-pill {
     font-size: 10px;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
     text-transform: lowercase;
     padding: 0.2rem 0.6rem;
     border: 1px solid var(--line-color);
-    border-radius: 20px;
-    color: #666;
+    color: var(--gray-600);
 }
 
 /* ── Right Side (Title + Desc) ── */
@@ -70,24 +68,23 @@
     flex-direction: column;
     gap: 0.5rem;
     padding-top: 0.5rem;
-    /* slight offset to align with image top visually */
 }
 
 .project-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 2.4rem;
-    line-height: 1.1;
-    text-transform: lowercase;
-    letter-spacing: -0.01em;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .project-desc {
-    font-family: monospace;
-    font-size: 11px;
-    line-height: 1.5;
-    color: #444;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+    color: var(--gray-600);
 }
 
 /* ── Responsive ── */

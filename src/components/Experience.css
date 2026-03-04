@@ -1,6 +1,6 @@
 .exp-container {
     max-width: 80vw;
-    margin: 0 auto 20vh auto;
+    margin-bottom: 20vh;
 }
 
 /* ── Education Block ── */
@@ -17,20 +17,30 @@
 }
 
 .edu-date {
-    font-family: 'Inter', sans-serif;
-    color: #888;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+    color: var(--gray-400);
 }
 
 .edu-degree {
-    font-weight: 500;
-    font-size: 1.2rem;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
 }
 
 .edu-school {
     text-align: right;
-    font-style: italic;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+    color: var(--gray-600);
 }
 
 .edu-details {
@@ -53,34 +63,41 @@
 /* ── Experience Rows ── */
 .exp-row {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr auto;
+    align-items: center;
     padding: 1.5rem 0;
     border-top: 1px solid var(--line-color);
-    transition: padding 0.3s ease;
 }
 
 .exp-row:last-child {
     border-bottom: 1px solid var(--line-color);
 }
 
-.exp-row:hover {
-    padding: 2.5rem 0;
-}
-
 .exp-date {
-    font-family: 'Inter', sans-serif;
-    color: #888;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+    color: var(--gray-400);
 }
 
 .exp-role {
-    font-weight: 400;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
 }
 
 .exp-company {
     text-align: right;
-    font-style: italic;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-sans);
     font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+    color: var(--gray-600);
 }
 
 @media (max-width: 768px) {
@@ -106,18 +123,103 @@
     }
 
     .exp-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr auto;
         gap: 0.5rem;
     }
 
     .exp-company {
         text-align: left;
+        grid-column: 1;
+    }
+
+    .exp-toggle {
+        grid-column: 2;
+        grid-row: 1;
+        margin-left: 0;
+    }
+
+    .exp-desc {
+        grid-column: 1 / -1;
     }
 }
 
-a.exp-row {
-    text-decoration: none;
+a.exp-company {
+    text-decoration: underline;
+    text-underline-offset: 3px;
     color: inherit;
-    display: grid;
-    /* override default inline */
+}
+
+a.exp-company:hover {
+    opacity: 0.5;
+}
+
+.exp-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-sans);
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--text-color);
+    padding: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    margin-left: 1.5rem;
+    transition: opacity 0.2s ease;
+}
+
+.exp-toggle:hover {
+    opacity: 0.4;
+}
+
+.exp-desc {
+    grid-column: 2 / 4;
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.exp-desc--open {
+    max-height: 400px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.exp-context {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+    color: var(--gray-400);
+    margin-bottom: 0.6rem;
+}
+
+.exp-bullets {
+    list-style: none;
+}
+
+.exp-bullets li {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
+    color: var(--gray-600);
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: 0.4rem;
+}
+
+.exp-bullets li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gray-400);
 }

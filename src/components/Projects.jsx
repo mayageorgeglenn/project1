@@ -5,12 +5,11 @@ import './Projects.css';
 export default function Projects() {
     return (
         <section id="work">
-            <span className="section-label">02 — Projects</span>
+            <h2 className="section-heading">Projects<span className="flower-accent">✱</span></h2>
 
             <div className="work-grid">
                 {projects.map((p) => (
                     <Link to={`/projects/${p.id}`} className="project-card" key={p.name}>
-                        {/* Left Side: Image + Tags */}
                         <div className="project-left">
                             <div className="img-container">
                                 <img src={p.img} alt={p.name} className="project-img" />
@@ -21,8 +20,6 @@ export default function Projects() {
                                 ))}
                             </div>
                         </div>
-
-                        {/* Right Side: Title + Description */}
                         <div className="project-right">
                             <h3 className="project-title">{p.name}</h3>
                             <p className="project-desc">{p.desc}</p>

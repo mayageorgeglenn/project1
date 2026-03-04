@@ -9,8 +9,8 @@
 }
 
 .cv__col-title {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.2em;
@@ -35,24 +35,26 @@
 }
 
 .cv__item-org {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
     font-weight: 500;
     color: var(--black);
     margin-top: 2px;
 }
 
 .cv__item-date {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 300;
     color: var(--gray-400);
     letter-spacing: 0.05em;
     margin-bottom: 6px;
 }
 
 .cv__item-desc {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 300;
     color: var(--gray-600);
     line-height: 1.7;
 }
@@ -66,7 +68,7 @@
 }
 
 .cv__skill {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.6rem;
     font-weight: 500;
     color: var(--gray-600);
@@ -88,12 +90,22 @@
 }
 
 .cv__category-label {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-size: 0.55rem;
+    font-weight: 300;
     color: var(--gray-400);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     margin-bottom: 6px;
+}
+
+.section-wrap .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 10rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    margin-bottom: 4rem;
 }
 
 @media (max-width: 768px) {

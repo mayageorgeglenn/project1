@@ -6,6 +6,36 @@
     justify-content: center;
     padding: 0 var(--edge-padding);
     position: relative;
+    overflow: hidden;
+}
+
+.hero-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 0;
+}
+
+.hero-portrait {
+    height: 72vh;
+    width: auto;
+    max-width: 22vw;
+    object-fit: contain;
+    object-position: bottom;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 0;
+    margin-left: -4vw;
+}
+
+/* Scale mega-name down to fill the narrower text column */
+.hero-text .mega-name {
+    font-size: 11.5vw;
 }
 
 .hero-subtitle {
@@ -14,10 +44,7 @@
     font-size: 1.5rem;
     letter-spacing: -0.01em;
     margin-top: 1.5rem;
-    max-width: 800px;
-    /* Increased max-width */
     white-space: nowrap;
-    /* Prevent wrapping */
 }
 
 .hero-outline-char {
@@ -25,13 +52,52 @@
     -webkit-text-stroke: 1px black;
 }
 
+/* ── Shooting star trail ── */
+.star-trail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.trail-star {
+    position: absolute;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+    font-family: var(--font-sans);
+    font-weight: 300;
+    line-height: 1;
+    display: block;
+}
+
 @media (max-width: 768px) {
     .hero-section {
         padding-left: 1rem;
+        justify-content: flex-end;
+        padding-bottom: 6vh;
+    }
+
+    .hero-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .hero-portrait {
+        height: 35vh;
+        max-width: 60vw;
+        object-position: bottom left;
+    }
+
+    .hero-text .mega-name {
+        font-size: 20vw;
     }
 
     .hero-subtitle {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         font-size: 1.1rem;
+        white-space: normal;
     }
 }

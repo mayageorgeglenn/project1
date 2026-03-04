@@ -1,6 +1,6 @@
 .consuming-container {
     max-width: 80vw;
-    margin: 0 auto 20vh auto;
+    margin-bottom: 20vh;
 }
 
 .consuming-grid {
@@ -12,20 +12,28 @@
 }
 
 .consuming-title {
+    font-family: var(--font-sans);
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 1.5rem;
     display: block;
     opacity: 0.5;
+    font-weight: 500;
 }
 
 .consuming-col p {
-    font-size: 1.2rem;
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
     font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.01em;
     margin-bottom: 0.8rem;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
+}
+
+.consuming-col a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 @media (max-width: 768px) {

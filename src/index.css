@@ -6,6 +6,26 @@
   --text-color: #000000;
   --edge-padding: 2.5vw;
   --line-color: rgba(0, 0, 0, 0.15);
+
+  /* Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-display: 'Archivo Black', sans-serif;
+  --font-mono: 'Inter', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-s: 1rem;
+  --space-m: 2rem;
+  --space-l: 4rem;
+  --space-xl: 8rem;
+
+  /* Colors */
+  --black: #000000;
+  --white: #ffffff;
+  --gray-200: rgba(0, 0, 0, 0.1);
+  --gray-400: #999999;
+  --gray-600: #555555;
 }
 
 /* ── Reset ── */
@@ -114,15 +134,27 @@ body::before {
   transform: translateY(2px);
 }
 
-/* ── Section Label ── */
-.section-label {
-  font-size: 11px;
+/* ── Section Heading (editorial) ── */
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 10rem);
+  line-height: 0.9;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 2rem;
+  letter-spacing: -0.03em;
+  margin: 0 0 4rem 0;
+  padding: 0;
   display: block;
-  position: sticky;
-  top: 15vh;
+  width: 100%;
+}
+
+/* ── Flower Accent (reusable) ── */
+.flower-accent {
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.6em;
+  vertical-align: middle;
 }
 
 /* ── Section Anchors ── */

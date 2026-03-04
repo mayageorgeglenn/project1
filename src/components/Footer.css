@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    border-top: 1px solid var(--line-color);
 }
 
 .footer__col {
@@ -20,8 +21,9 @@
 }
 
 .footer__col--center {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 300;
     color: var(--gray-400);
     text-align: center;
     letter-spacing: 0.1em;
@@ -29,8 +31,9 @@
 }
 
 .footer__col--right {
-    font-family: var(--font-mono);
-    font-size: 0.6rem;
+    font-family: var(--font-sans);
+    font-size: 0.65rem;
+    font-weight: 300;
     text-align: right;
     color: var(--gray-400);
     letter-spacing: 0.05em;

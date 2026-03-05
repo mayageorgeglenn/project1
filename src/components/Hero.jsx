@@ -5,8 +5,6 @@ export default function Hero() {
         <header className="hero-section" id="hero">
             {/* Shooting star trail — arcs up-left from the Glenn ✱ */}
             <div className="star-trail" aria-hidden="true">
-                {/* Origin — right next to Glenn ✱, same level */}
-                <span className="trail-star" style={{ left: '81vw', top: '56vh', fontSize: '3.2rem' }}>✱</span>
                 {/* Arc up through space right of MAYA letters */}
                 <span className="trail-star" style={{ left: '78vw', top: '50vh', fontSize: '3.0rem' }}>✱</span>
                 <span className="trail-star" style={{ left: '76vw', top: '44vh', fontSize: '2.8rem' }}>✱</span>

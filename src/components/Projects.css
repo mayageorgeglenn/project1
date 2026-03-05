@@ -91,7 +91,8 @@
 @media (max-width: 768px) {
     .work-grid {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        gap: 3rem;
+        margin-bottom: 12vh;
     }
 
     .project-card {
@@ -101,5 +102,11 @@
 
     .project-right {
         padding-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .work-grid {
+        gap: 2.5rem;
     }
 }

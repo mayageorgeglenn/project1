@@ -19,3 +19,15 @@
 .contact-link:hover {
     opacity: 0.5;
 }
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding-bottom: 8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        padding-bottom: 4rem;
+    }
+}

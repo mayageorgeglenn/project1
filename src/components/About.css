@@ -25,6 +25,10 @@
 }
 
 @media (max-width: 768px) {
+    .about-section {
+        margin-bottom: 15vh;
+    }
+
     .about-body {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -37,5 +41,12 @@
     .about-headshot {
         height: 20rem;
         width: auto;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-headshot {
+        height: 14rem;
     }
 }

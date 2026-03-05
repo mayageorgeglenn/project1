@@ -117,3 +117,46 @@
     font-weight: 300;
     margin-bottom: 2rem;
 }
+
+@media (max-width: 768px) {
+    .detail-wrap {
+        padding: 10vh 1rem 6vh;
+    }
+
+    .detail-content {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-left {
+        grid-column: 1;
+    }
+
+    .detail-body {
+        grid-column: 1;
+    }
+
+    .detail-video-wrapper {
+        max-height: 65vh;
+        width: 100%;
+        aspect-ratio: 9 / 19.5;
+        margin: 0 auto;
+    }
+
+    .detail-img-container.ar-landscape {
+        aspect-ratio: 16 / 9;
+    }
+
+    .detail-text-block {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-wrap {
+        padding: 8vh 0.75rem 4vh;
+    }
+
+    .detail-title {
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+}

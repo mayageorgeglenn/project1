@@ -74,21 +74,25 @@
 
 @media (max-width: 768px) {
     .hero-section {
-        padding-left: 1rem;
-        justify-content: flex-end;
-        padding-bottom: 6vh;
+        justify-content: center;
+        padding-bottom: 4vh;
+        height: 100dvh;
     }
 
     .hero-inner {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0;
+        gap: 2vh;
     }
 
     .hero-portrait {
-        height: 35vh;
-        max-width: 60vw;
+        height: 40vh;
+        max-width: 65vw;
         object-position: bottom left;
+    }
+
+    .hero-text {
+        margin-left: 0;
     }
 
     .hero-text .mega-name {
@@ -96,8 +100,23 @@
     }
 
     .hero-subtitle {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         font-size: 1.1rem;
         white-space: normal;
+    }
+
+    .star-trail {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-portrait {
+        height: 32vh;
+        max-width: 75vw;
+    }
+
+    .hero-text .mega-name {
+        font-size: 22vw;
     }
 }

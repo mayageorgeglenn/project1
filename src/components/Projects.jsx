@@ -11,7 +11,7 @@ export default function Projects() {
                 {projects.map((p) => (
                     <Link to={`/projects/${p.id}`} className="project-card" key={p.name}>
                         <div className="project-left">
-                            <div className="img-container">
+                            <div className={`img-container${p.imgContain ? ' img-contain' : ''}`}>
                                 <img src={p.img} alt={p.name} className="project-img" />
                             </div>
                             <div className="project-tags">

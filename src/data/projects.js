@@ -36,10 +36,15 @@ export const projects = [
     {
         id: 'noted-source',
         name: 'NOTED SOURCE DUE DILIGENCE PITCH',
-        desc: '',
-        detail: '',
-        tags: [],
-        img: '/img-ml.png',
+        desc: 'A due diligence investment pitch prepared for NotedSource, a platform connecting students with verified note-takers.',
+        detail: 'This deck presents a structured due diligence analysis of NotedSource — covering market opportunity, competitive landscape, business model, financials, and investment thesis. Prepared as part of a student investment fund evaluation process.',
+        tags: ['investment', 'due diligence', 'fintech', 'research'],
+        img: '/noted-slides/slide-01.png',
         aspect: 'ar-landscape',
+        imgContain: true,
+        carousel: Array.from({ length: 28 }, (_, i) => ({
+            src: `/noted-slides/slide-${String(i + 1).padStart(2, '0')}.png`,
+            caption: '',
+        })),
     },
 ];
